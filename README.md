@@ -1,7 +1,11 @@
 # Implementation of Forward and Inverse Kinematics for a 3-DOF Robotic Manipulator
 
-OverviewThis project focuses on the design and programming of a multi-degree-of-freedom (DOF) robotic arm using an Arduino microcontroller and Dynamixel AX-12 smart servos. 
-The primary objective was to transition from simple motor control to intelligent spatial navigation, allowing the robot to perform precise tasks such as drawing geometric shapes in 3D space.2. 
+## Overview:
+
+This project focuses on the design and programming of a multi-degree-of-freedom (DOF) robotic arm using an Arduino microcontroller and Dynamixel AX-12 smart servos. 
+The primary objective was to transition from simple motor control to intelligent spatial navigation, allowing the robot to perform precise tasks such as drawing geometric shapes in 3D space.
+
+
 The Challenge: KinematicsRobotic arms naturally move in arcs because they are driven by rotational joints. This creates a fundamental control challenge:Forward Kinematics (FK): 
 Calculating where the hand is located ($X, Y, Z$) based on known motor angles. This acts as a monitoring system, similar to a GPS, but does not allow for direct coordinate control.Inverse Kinematics (IK): 
 The more complex process of calculating the necessary motor angles to reach a specific target coordinate ($X, Y$). This is essential for straight-line motion, as it requires the robot to coordinate multiple 
