@@ -1,24 +1,17 @@
-# Implementation of Forward and Inverse Kinematics for a 3-DOF Robotic Manipulator
+# Kinematic Control of a 3-DOF Robotic Manipulator
 
 ## Overview
-This project focuses on the design and programming of a multi-degree-of-freedom (DOF) robotic arm using an Arduino microcontroller and Dynamixel AX-12 smart servos. The primary objective was to transition from simple motor control to intelligent spatial navigation, allowing the robot to perform precise tasks such as drawing geometric shapes in 3D space.
+This project explores the mathematical modeling and control of a robotic arm using an Arduino microcontroller and Dynamixel AX-12 servos. The goal was to move beyond simple motor rotation and implement **coordinate-based control**, allowing the robot to navigate 3D space using X and Y coordinates.
 
-## The Challenge: Kinematics
-Robotic arms naturally move in arcs because they are driven by rotational joints. This creates a fundamental control challenge:
+## The Challenge
+Controlling a robotic arm is difficult because the motors move in circles (rotational motion), but we often want the hand to move in straight lines (linear motion).
+* **Forward Kinematics (Implemented):** The robot calculates the Cartesian position (X, Y, Z) of its end-effector in real-time based on joint angles.
+* **Inverse Kinematics (Implemented):** The system calculates the required joint angles to reach a specific target coordinate (X, Y). This allows the robot to plan paths rather than just move motors.
 
-* **Forward Kinematics (FK):** Calculating where the hand is located (X, Y, Z) based on known motor angles. This acts as a monitoring system, similar to a GPS, but does not allow for direct coordinate control.
-* **Inverse Kinematics (IK):** The more complex process of calculating the necessary motor angles to reach a specific target coordinate (X, Y). This is essential for straight-line motion, as it requires the robot to coordinate multiple joints simultaneously to fight its natural rotational arc.
+## Implementation & Results
+The project successfully implements the geometric algorithms required for spatial navigation:
+* **Coordinate Navigation:** The robot accepts (X, Y) target commands.
+* **Linear Trajectory Planning:** The software interpolates intermediate points to drive the end-effector in straight lines (e.g., vertical lifting or horizontal reaching) rather than natural arcs.
+* **Shape Execution:** The system can programmatically trace geometric paths, such as a square box trajectory.
 
-## Implementation Journey
-The project began by establishing **Forward Kinematics** to visualize the robot's position in real-time. By applying trigonometric principles (Law of Cosines), we translated raw motor data into Cartesian coordinates.
-
-The core of the project was the implementation of **Inverse Kinematics**. This involved deriving geometric formulas to control the Shoulder and Elbow joints dynamically. A critical step was the calibration of the physical robot (correcting "L-shape" hardware offsets) to match the mathematical model.
-
-## Results
-The final system successfully demonstrated precise control capabilities. Unlike basic servo movements which result in curved paths, this robot is capable of:
-
-* **Linear Interpolation:** Moving the end-effector in perfectly straight horizontal and vertical lines.
-* **Coordinate Navigation:** Accepting precise (X, Y) commands to reach specific points in space.
-* **Complex Trajectories:** Autonomously drawing shapes, such as a 5cm x 5cm square, by synchronizing multiple motors in real-time.
-
-This project demonstrates the practical application of trigonometry and control theory in robotics, bridging the gap between abstract math and physical motion.
+*Note: While the inverse kinematics algorithms generate linear paths, physical motion is subject to mechanical compliance and backlash inherent in the rapid-prototyping hardware.*
