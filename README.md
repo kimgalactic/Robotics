@@ -17,5 +17,5 @@ The project successfully implements the geometric algorithms required for spatia
 *Note: While the inverse kinematics algorithms generate linear paths, physical motion is subject to mechanical compliance and backlash inherent in the rapid-prototyping hardware.*
 
 
-Manipulator
+### Manipulator
 <img width="936" height="535" alt="image" src="https://github.com/user-attachments/assets/0a2d3b3f-6b05-4611-a40c-601d085fd13f" />
