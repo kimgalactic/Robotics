@@ -5,8 +5,8 @@
 #include <math.h>
 
 // MEASURE ROBOT (in cm)
-float L1 = 10.0; // Length between Shoulder (5) and Elbow (4)
-float L2 = 10.0; // Length from Elbow (4) to Tip
+float L1 = 7.0; // Length between Shoulder (5) and Elbow (4)
+float L2 = 7.0; // Length from Elbow (4) to Tip
 
 void setup() {
   Serial.begin(1000000);
