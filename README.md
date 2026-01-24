@@ -8,15 +8,16 @@
 ## 📝 Overview
 This project moves beyond simple motor rotation by implementing **coordinate-based control** for a 3-DOF robotic arm. Using custom mathematical models, the system allows the user to input $(X, Y, Z)$ coordinates, and the robot automatically calculates the required joint angles to reach that position in 3D space.
 
-### 🎥 Simulation Demo
-[![Watch the simulation](https://img.youtube.com/vi/VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_HERE)
-
-> **Click the image above** to see the inverse kinematics algorithm in action.
+### 🎥 Live Simulations
+| Demo 1: Forward Kinematics | Demo 2: Inverse Kinematics |
+| :---: | :---: |
+| [![Forward Kinematics](https://img.youtube.com/vi/sGDtoM8FjZY/0.jpg)](https://www.youtube.com/shorts/sGDtoM8FjZY) | [![Inverse Kinematics](https://img.youtube.com/vi/xQ8GkRC5Hto/0.jpg)](https://www.youtube.com/shorts/xQ8GkRC5Hto) |
+> *Click the images above to watch the demos on YouTube.*
 
 ## 🧠 Key Implementations
 
 ### 1. The Challenge
-Controlling a robot arm is difficult because motors move in circles (rotational motion), but we want the hand to move in straight lines (linear motion).
+Controlling a robot arm is difficult because motors move in circles (rotational motion), but we often want the hand to move in straight lines (linear motion) to grab objects.
 
 ### 2. The Solution
 I implemented the fundamental geometric algorithms required for spatial navigation:
@@ -30,12 +31,12 @@ I implemented the fundamental geometric algorithms required for spatial navigati
 ## 💻 Tech Stack
 * **Simulation:** MATLAB (Visualizing the DH-Parameters and workspace).
 * **Hardware Control:** C++ / Arduino.
-* **Actuators:** Dynamixel AX-12 Servos (or similar).
+* **Actuators:** Dynamixel AX-12 Servos.
 
 ## 📊 Visual Results
-**Inverse Kinematics Solver in MATLAB:**
-![Matlab Simulation](media/matlab_sim.png)
-*The figure above shows the calculated link positions required to reach the target coordinate $(4, 0, -2)$.*
+**MATLAB Visualization & Verification:**
+![Matlab Simulation](media/matlab_sim.jpg)
+*The figure above shows the calculated link positions required to reach the target coordinate $(4, 0, -2)$, verifying the IK solver before hardware deployment.*
 
 ## 📂 File Structure
 * `ik_matlab.m`: MATLAB script for calculating Inverse Kinematics.
