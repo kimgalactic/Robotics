@@ -43,5 +43,13 @@ I implemented the fundamental geometric algorithms required for spatial navigati
 * `forward_kinematics.ino`: C++ code for FK implementation on the microcontroller.
 * `jacobian.m`: Differential kinematics for velocity control.
 
+## 📸 Project Gallery
+Detailed views of the MATLAB simulation, trajectory planning, and hardware implementation.
+
+| | | |
+|:---:|:---:|:---:|
+| <img src="media/1.png" width="250"> | <img src="media/2.png" width="250"> | <img src="media/3.png" width="250"> |
+| <img src="media/4.png" width="250"> | <img src="media/5.png" width="250"> | <img src="media/6.png" width="250"> |
+| <img src="media/7.png" width="250"> | <img src="media/8.png" width="250"> | <img src="media/9.png" width="250"> |
 ---
 *Created by [Abdullakim](https://github.com/Abdullakim1)*
