@@ -35,7 +35,7 @@ I implemented the fundamental geometric algorithms required for spatial navigati
 
 ## 📊 Visual Results
 **MATLAB Visualization & Verification:**
-|---|---|
+| :---: | :---: |
 | ![](media/demo.gif) | ![](media/demo1.gif) |
 *The figure above shows the calculated link positions required to reach the target coordinate $(4, 0, -2)$, verifying the IK solver before hardware deployment.*
 
