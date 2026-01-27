@@ -35,11 +35,12 @@ I implemented the fundamental geometric algorithms required for spatial navigati
 
 ## 📊 Visual Results
 **MATLAB Visualization & Verification:**
-| |
-| :---: | :---: |
-| ![](media/demo.gif) | ![](media/demo1.gif) |
-*The figure above shows the calculated link positions required to reach the target coordinate $(4, 0, -2)$, verifying the IK solver before hardware deployment.*
 
+| Simulation Demo A | Simulation Demo B |
+| :---: | :---: |
+| <img src="media/demo.gif" width="100%"> | <img src="media/demo1.gif" width="100%"> |
+
+*The figures above show the calculated link positions required to reach the target coordinate, verifying the IK solver before hardware deployment.*
 ## 📂 File Structure
 * `ik_matlab.m`: MATLAB script for calculating Inverse Kinematics.
 * `forward_kinematics.ino`: C++ code for FK implementation on the microcontroller.
